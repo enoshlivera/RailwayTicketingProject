@@ -1,0 +1,21 @@
+﻿.footerlinks {
+    color: #ffffff;
+    text-decoration: none !important;
+}
+.footerlinks:hover {
+    color: #ffd800;
+}
+#footer1 {
+    background: #515050;
+}
+#footer2 {
+    background: #808080;
+}
+
+#background-container {
+    background-image: url('../imgs/gallery-4.jpg'); /* Specify the path to your image */
+    background-size: auto; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    /* You can add more CSS properties as needed */
+}
+

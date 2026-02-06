@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="RailwayTicketingProject.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_css_bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/cdn.datatables.net_1.13.6_css_jquery.dataTables.min.css" rel="stylesheet" />
+    <%--frontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--Our custom css--%>
+    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
+
+    <%--jquery js--%>
+    <script src="bootstrap/js/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_js_bootstrap.bundle.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/cdn.jsdelivr.net_npm_@popperjs_core@2.11.8_dist_umd_popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_js_bootstrap.min.js"></script>
+    <%--datatable js--%>
+    <script src="datatables/js/cdn.datatables.net_1.13.6_js_jquery.dataTables.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/railway.png" width="30" height="30"/>
+                    Railway Ticketing System
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="homepage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Terms</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" >View Trains</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" href="loginpage.aspx">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" href="usersignuppage.aspx">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False">Hello User</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--Main Content Placeholder-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--Main Content Placeholder-->
+
+        <!-- Footer-->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" >Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" Visible="False">Train Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False">Member Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" Visible="False">Schedule Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" Visible="False">Revanue Management</asp:LinkButton>
+                            &nbsp;
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">
+                            &copy All Right Reversed. 
+                            <a class="footerlinks" href="#" target="_blank">Esoft Metro Campus - Negombo (TopUp Batch)</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
